@@ -33,14 +33,15 @@ minetest.register_node("naturalbiomes:heath_litter2", {
 		place_on = {"naturalbiomes:heath_litter"},
 		sidelen = 16,
 		place_offset_y = -1,
-                flags = "force_placement",
+		flags = "force_placement",
 		noise_params = {
-			offset = -0,
-			scale = 0.5,
-			spread = {x = 50, y = 50, z = 50},
-			seed = 5792,
-			octaves = 6,
-			persist = 1,
+			offset = 0.25,
+			scale = 2,
+			spread = {x = 80, y = 80, z = 80},
+			seed = 12345,
+			octaves = 2,
+			persist = 0.5,
+			lacunarity = 0.8,
 		},
 		y_max = 60,
 		y_min = 5,
@@ -62,16 +63,17 @@ minetest.register_node("naturalbiomes:heath_litter3", {
 	minetest.register_decoration({
 		deco_type = "simple",
 		place_on = {"naturalbiomes:heath_litter"},
-		sidelen = 16,
+		sidelen = 8,
 		place_offset_y = -1,
-                flags = "force_placement",
+		flags = "force_placement",
 		noise_params = {
-			offset = -0,
-			scale = 2,
+			offset = -0.1,
+			scale = 3,
 			spread = {x = 100, y = 100, z = 100},
-			seed = 1874,
-			octaves = 11,
-			persist = 1,
+			seed = 54321,
+			octaves = 3,
+			persist = 0.5,
+			lacunarity = 0.9,
 		},
 		y_max = 60,
 		y_min = 5,
@@ -120,7 +122,7 @@ minetest.register_node("naturalbiomes:heath_grass", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -152,7 +154,7 @@ minetest.register_node("naturalbiomes:heath_grass2", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -185,7 +187,7 @@ minetest.register_node("naturalbiomes:heath_grass3", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -196,10 +198,10 @@ minetest.register_node("naturalbiomes:heath_grass3", {
 	minetest.register_decoration({
 		name = "naturalbiomes:heatherflower",
 		deco_type = "simple",
-		place_on = {"naturalbiomes:heath_litter2"},
+		place_on = {"naturalbiomes:heath_litter2","naturalbiomes:heath_litter3"},
 		sidelen = 16,
-                fill_ratio = 0.08115,
-                biomes = {"naturalbiomes:heath"},
+		fill_ratio = 0.0275,
+		biomes = {"naturalbiomes:heath"},
 		y_max = 31000,
 		y_min = 4,
 		decoration = "naturalbiomes:heatherflower",
@@ -207,7 +209,7 @@ minetest.register_node("naturalbiomes:heath_grass3", {
 	})
 
 minetest.register_node("naturalbiomes:heatherflower", {
-	    description = S"Heather Flower",
+	    description = S"Pale Heather Flower",
 	    drawtype = "plantlike",
 	    waving = 1,
 	    visual_scale = 2.0,
@@ -218,7 +220,7 @@ minetest.register_node("naturalbiomes:heatherflower", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -229,10 +231,10 @@ minetest.register_node("naturalbiomes:heatherflower", {
 	minetest.register_decoration({
 		name = "naturalbiomes:heatherflower2",
 		deco_type = "simple",
-		place_on = {"naturalbiomes:heath_litter2"},
+		place_on = {"naturalbiomes:heath_litter2","naturalbiomes:heath_litter3"},
 		sidelen = 16,
-                fill_ratio = 0.08115,
-                biomes = {"naturalbiomes:heath"},
+		fill_ratio = 0.0275,
+		biomes = {"naturalbiomes:heath"},
 		y_max = 31000,
 		y_min = 4,
 		decoration = "naturalbiomes:heatherflower2",
@@ -240,7 +242,7 @@ minetest.register_node("naturalbiomes:heatherflower", {
 	})
 
 minetest.register_node("naturalbiomes:heatherflower2", {
-	    description = S"Heather Flower",
+	    description = S"Blush Heather Flower",
 	    drawtype = "plantlike",
 	    waving = 1,
 	    visual_scale = 2.0,
@@ -251,7 +253,7 @@ minetest.register_node("naturalbiomes:heatherflower2", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -262,10 +264,10 @@ minetest.register_node("naturalbiomes:heatherflower2", {
 	minetest.register_decoration({
 		name = "naturalbiomes:heatherflower3",
 		deco_type = "simple",
-		place_on = {"naturalbiomes:heath_litter2"},
+		place_on = {"naturalbiomes:heath_litter2","naturalbiomes:heath_litter3"},
 		sidelen = 16,
-                fill_ratio = 0.08115,
-                biomes = {"naturalbiomes:heath"},
+		fill_ratio = 0.0275,
+		biomes = {"naturalbiomes:heath"},
 		y_max = 31000,
 		y_min = 4,
 		decoration = "naturalbiomes:heatherflower3",
@@ -273,7 +275,7 @@ minetest.register_node("naturalbiomes:heatherflower2", {
 	})
 
 minetest.register_node("naturalbiomes:heatherflower3", {
-	    description = S"Heather Flower",
+	    description = S"Dusk Heather Flower",
 	    drawtype = "plantlike",
 	    waving = 1,
 	    visual_scale = 1.5,
@@ -284,7 +286,7 @@ minetest.register_node("naturalbiomes:heatherflower3", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -295,10 +297,10 @@ minetest.register_node("naturalbiomes:heatherflower3", {
 	minetest.register_decoration({
 		name = "naturalbiomes:heatherflower4",
 		deco_type = "simple",
-		place_on = {"naturalbiomes:heath_litter2"},
+		place_on = {"naturalbiomes:heath_litter2","naturalbiomes:heath_litter3"},
 		sidelen = 16,
-                fill_ratio = 0.04115,
-                biomes = {"naturalbiomes:heath"},
+		fill_ratio = 0.0275,
+		biomes = {"naturalbiomes:heath"},
 		y_max = 31000,
 		y_min = 4,
 		decoration = "naturalbiomes:heatherflower4",
@@ -306,7 +308,7 @@ minetest.register_node("naturalbiomes:heatherflower3", {
 	})
 
 minetest.register_node("naturalbiomes:heatherflower4", {
-	    description = S"Heather Flower",
+	    description = S"Cute Heather Flower",
 	    drawtype = "plantlike",
 	    waving = 1,
 	    visual_scale = 1.5,
@@ -317,7 +319,7 @@ minetest.register_node("naturalbiomes:heatherflower4", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -350,7 +352,7 @@ minetest.register_node("naturalbiomes:swampgrass", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -383,7 +385,7 @@ minetest.register_node("naturalbiomes:swampgrass2", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -801,10 +803,18 @@ minetest.register_decoration({
     deco_type = "schematic",
     place_on = {"naturalbiomes:heath_litter3"},
     place_offset_y = 1,
-    sidelen = 16,
-    fill_ratio = 0.00315,
+    sidelen = 8,
+		noise_params = {
+			offset = -0.001725,
+			scale = 0.01,
+			spread = {x = 100, y = 20, z = 100},
+			seed = 494,
+			octaves = 2,
+			persistence = 0.8,
+			lacunarity = 0.9,
+		},
     biomes = {"naturalbiomes:heath"},
-    y_max = 50,
+    y_max = 31000,
     y_min = 5,
     schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_junipertree.mts",
 	flags = "place_center_x, place_center_z",
@@ -816,10 +826,18 @@ minetest.register_decoration({
     deco_type = "schematic",
     place_on = {"naturalbiomes:heath_litter3"},
     place_offset_y = 1,
-    sidelen = 16,
-    fill_ratio = 0.00315,
+    sidelen = 8,
+		noise_params = {
+			offset = -0.001725,
+			scale = 0.01,
+			spread = {x = 100, y = 20, z = 100},
+			seed = 672,
+			octaves = 2,
+			persistence = 0.8,
+			lacunarity = 0.9,
+		},
     biomes = {"naturalbiomes:heath"},
-    y_max = 50,
+    y_max = 31000,
     y_min = 5,
     schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_junipertree2.mts",
 	flags = "place_center_x, place_center_z",
@@ -841,7 +859,7 @@ end
 
 -- birch trunk
 minetest.register_node("naturalbiomes:heath_birch_trunk", {
-	description = S("Birch Trunk"),
+	description = S("Silver Birch Trunk"),
 	tiles = {
 		"naturalbiomes_heath_birch_trunk_top.png",
 		"naturalbiomes_heath_birch_trunk_top.png",
@@ -855,7 +873,7 @@ minetest.register_node("naturalbiomes:heath_birch_trunk", {
 
 -- birch wood
 minetest.register_node("naturalbiomes:heath_birch_wood", {
-	description = S("Birch Wood"),
+	description = S("Silver Birch Wood"),
 	tiles = {"naturalbiomes_heath_birch_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
@@ -868,7 +886,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("naturalbiomes:heath_birch_leaves", {
-  description = S("Birch Leaves"),
+  description = S("Silver Birch Leaves"),
   drawtype = "allfaces_optional",
   visual_scale = 1.0,
   waving = 1,
@@ -898,7 +916,7 @@ minetest.register_node("naturalbiomes:heath_birch_leaves", {
 })
 
 minetest.register_node("naturalbiomes:birch_sapling", {
-  description = S("Birch Sapling"),
+  description = S("Silver Birch Sapling"),
   drawtype = "plantlike",
   tiles = {"naturalbiomes_heath_birch_sapling.png"},
   inventory_image = "naturalbiomes_heath_birch_sapling.png",
@@ -942,8 +960,8 @@ minetest.register_node("naturalbiomes:birch_sapling", {
       "naturalbiomes:heath_birch_wood",
       {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
       {"naturalbiomes_heath_birch_wood.png"},
-      S("Birch Stair"),
-      S("Birch Slab"),
+      S("Silver Birch Stair"),
+      S("Silver Birch Slab"),
       default.node_sound_wood_defaults()
     )
 
@@ -952,15 +970,15 @@ minetest.register_node("naturalbiomes:birch_sapling", {
       "naturalbiomes:heath_birch_trunk",
       {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
       {"naturalbiomes_heath_birch_trunk_top.png", "naturalbiomes_heath_birch_trunk_top.png", "naturalbiomes_heath_birch_trunk.png"},
-      S("Birch Trunk Stair"),
-      S("Birch Trunk Slab"),
+      S("Silver Birch Trunk Stair"),
+      S("Silver Birch Trunk Slab"),
       default.node_sound_wood_defaults()
     )
 
   doors.register_fencegate(
     "naturalbiomes:gate_birch_wood",
     {
-      description = S("Birch Wood Fence Gate"),
+      description = S("Silver Birch Wood Fence Gate"),
       texture = "naturalbiomes_heath_birch_wood.png",
       material = "naturalbiomes:heath_birch_wood",
       groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
@@ -972,7 +990,7 @@ minetest.register_node("naturalbiomes:birch_sapling", {
 default.register_fence(
   "naturalbiomes:fence_birch_wood",
   {
-    description = S("Birch Fence"),
+    description = S("Silver Birch Fence"),
     texture = "naturalbiomes_adler_fence_wood.png",
     inventory_image = "default_fence_overlay.png^naturalbiomes_heath_birch_wood.png^default_fence_overlay.png^[makealpha:255,126,126",
     wield_image = "default_fence_overlay.png^naturalbiomes_heath_birch_wood.png^default_fence_overlay.png^[makealpha:255,126,126",
@@ -985,7 +1003,7 @@ default.register_fence(
 default.register_fence_rail(
   "naturalbiomes:fence_rail_birch_wood",
   {
-    description = S("Birch Fence Rail"),
+    description = S("Silver Birch Fence Rail"),
     texture = "naturalbiomes_heath_birch_fence_wood.png",
     inventory_image = "default_fence_rail_overlay.png^naturalbiomes_heath_birch_wood.png^" ..
       "default_fence_rail_overlay.png^[makealpha:255,126,126",
@@ -998,49 +1016,52 @@ default.register_fence_rail(
 )
 
 minetest.register_decoration({
-    name = "naturalbiomes:heath_birch_tree",
-    deco_type = "schematic",
-    place_on = {"naturalbiomes:heath_litter3"},
-    place_offset_y = 0,
-    sidelen = 16,
-    fill_ratio = 0.00315,
-    biomes = {"naturalbiomes:heath"},
-    y_max = 50,
-    y_min = 5,
-    schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_birchtree.mts",
+	name = "naturalbiomes:heath_birch_tree",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:heath_litter"},
+	place_offset_y = 0,
+	sidelen = 16,
+	fill_ratio = 0.00315,
+	biomes = {"naturalbiomes:heath"},
+	y_max = 31000,
+	y_min = 5,
+	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_birchtree.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
+	spawn_by = "naturalbiomes:heath_litter",
+	num_spawn_by = 6,
 })
 
 minetest.register_decoration({
-    name = "naturalbiomes:heath_birch_tree2",
-    deco_type = "schematic",
-    place_on = {"naturalbiomes:heath_litter3"},
-    place_offset_y = 0,
-    sidelen = 16,
-    fill_ratio = 0.00315,
-    biomes = {"naturalbiomes:heath"},
-    y_max = 50,
-    y_min = 5,
-    schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_birchtree2.mts",
+	name = "naturalbiomes:heath_birch_tree2",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:heath_litter"},
+	place_offset_y = 0,
+	sidelen = 16,
+	fill_ratio = 0.00315,
+	biomes = {"naturalbiomes:heath"},
+	y_max = 31000,
+	y_min = 5,
+	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_birchtree2.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
+	spawn_by = "naturalbiomes:heath_litter",
+	num_spawn_by = 6,
 })
 
 	minetest.register_decoration({
 		name = "naturalbiomes:heatherflowernode",
 		deco_type = "simple",
 		place_on = {"naturalbiomes:heath_litter2"},
-		sidelen = 16,
+		sidelen = 8,
 		place_offset_y = 0,
-                flags = "force_placement",
+		flags = "force_placement",
 		noise_params = {
-			offset = -0,
-			scale = 0.6,
-			spread = {x = 150, y = 150, z = 150},
+			offset = -0.75,
+			scale = 2.5,
+			spread = {x = 25, y = 25, z = 25},
 			seed = 1456,
-			octaves = 8,
-			persist = 1,
+			octaves = 3,
 		},
 		y_max = 31000,
 		y_min = 4,
@@ -1049,7 +1070,7 @@ minetest.register_decoration({
 	})
 
 minetest.register_node("naturalbiomes:heatherflowernode", {
-	    description = S"Heather Flower Node",
+	    description = S"Pale Heather Flower Bush",
 	    drawtype = "allfaces_optional",
 	    waving = 1,
 	    visual_scale = 1.0,
@@ -1059,29 +1080,23 @@ minetest.register_node("naturalbiomes:heatherflowernode", {
 	    paramtype = "light",
 	    sunlight_propagates = true,
 	    walkable = false,
-	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
-	    selection_box = {
-		    type = "fixed",
-		    fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 0.0, 4 / 16},
-	    },
     })
 
 	minetest.register_decoration({
 		name = "naturalbiomes:heatherflower2node",
 		deco_type = "simple",
 		place_on = {"naturalbiomes:heath_litter2"},
-		sidelen = 16,
+		sidelen = 8,
 		place_offset_y = 0,
-                flags = "force_placement",
+		flags = "force_placement",
 		noise_params = {
-			offset = -0,
-			scale = 0.6,
-			spread = {x = 150, y = 150, z = 150},
+			offset = -0.75,
+			scale = 2.5,
+			spread = {x = 25, y = 25, z = 25},
 			seed = 7358,
-			octaves = 8,
-			persist = 1,
+			octaves = 3,
 		},
 		y_max = 31000,
 		y_min = 4,
@@ -1090,7 +1105,7 @@ minetest.register_node("naturalbiomes:heatherflowernode", {
 	})
 
 minetest.register_node("naturalbiomes:heatherflower2node", {
-	    description = S"Heather Flower Node",
+	    description = S"Blush Heather Flower Bush",
 	    drawtype = "allfaces_optional",
 	    waving = 1,
 	    visual_scale = 1,
@@ -1100,29 +1115,23 @@ minetest.register_node("naturalbiomes:heatherflower2node", {
 	    paramtype = "light",
 	    sunlight_propagates = true,
 	    walkable = false,
-	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
-	    selection_box = {
-		    type = "fixed",
-		    fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 0.0, 4 / 16},
-	    },
     })
 
 	minetest.register_decoration({
 		name = "naturalbiomes:heatherflower3node",
 		deco_type = "simple",
 		place_on = {"naturalbiomes:heath_litter2"},
-		sidelen = 16,
+		sidelen = 8,
 		place_offset_y = 0,
-                flags = "force_placement",
+		flags = "force_placement",
 		noise_params = {
-			offset = -0,
-			scale = 0.6,
-			spread = {x = 150, y = 150, z = 150},
+			offset = -0.75,
+			scale = 2.5,
+			spread = {x = 25, y = 25, z = 25},
 			seed = 2935,
-			octaves = 8,
-			persist = 1,
+			octaves = 3,
 		},
 		y_max = 31000,
 		y_min = 4,
@@ -1131,7 +1140,7 @@ minetest.register_node("naturalbiomes:heatherflower2node", {
 	})
 
 minetest.register_node("naturalbiomes:heatherflower3node", {
-	    description = S"Heather Flower Node",
+	    description = S"Dusk Heather Flower Bush",
 	    drawtype = "allfaces_optional",
 	    waving = 1,
 	    visual_scale = 1,
@@ -1141,29 +1150,23 @@ minetest.register_node("naturalbiomes:heatherflower3node", {
 	    paramtype = "light",
 	    sunlight_propagates = true,
 	    walkable = false,
-	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
-	    selection_box = {
-		    type = "fixed",
-		    fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 0.0, 4 / 16},
-	    },
     })
 
 	minetest.register_decoration({
 		name = "naturalbiomes:heatherflower4node",
 		deco_type = "simple",
 		place_on = {"naturalbiomes:heath_litter2"},
-		sidelen = 16,
+		sidelen = 8,
 		place_offset_y = 0,
-                flags = "force_placement",
+		flags = "force_placement",
 		noise_params = {
-			offset = -0,
-			scale = 0.6,
-			spread = {x = 150, y = 150, z = 150},
+			offset = -0.75,
+			scale = 2.5,
+			spread = {x = 25, y = 25, z = 25},
 			seed = 989,
-			octaves = 8,
-			persist = 1,
+			octaves = 3,
 		},
 		y_max = 31000,
 		y_min = 4,
@@ -1172,7 +1175,7 @@ minetest.register_node("naturalbiomes:heatherflower3node", {
 	})
 
 minetest.register_node("naturalbiomes:heatherflower4node", {
-	    description = S"Heather Flower Node",
+	    description = S"Cute Heather Flower Bush",
 	    drawtype = "allfaces_optional",
 	    waving = 1,
 	    visual_scale = 1,
@@ -1182,56 +1185,6 @@ minetest.register_node("naturalbiomes:heatherflower4node", {
 	    paramtype = "light",
 	    sunlight_propagates = true,
 	    walkable = false,
-	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
-	    selection_box = {
-		    type = "fixed",
-		    fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 0.0, 4 / 16},
-	    },
     })
-
-	minetest.register_decoration({
-		name = "naturalbiomes:heath_stoneformation",
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:heath_litter", "naturalbiomes:heath_litter2"},
-    place_offset_y = -2,
-		sidelen = 16,
-    fill_ratio = 0.00007,
-		biomes = {"naturalbiomes:heath"},
-		y_max = 31000,
-		y_min = 5,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_heath_stoneformation.mts",
-		flags = "place_center_x, place_center_z",
-    rotation = "random",
-	})
-
-	minetest.register_decoration({
-		name = "naturalbiomes:heath_stoneformation2",
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:heath_litter", "naturalbiomes:heath_litter2"},
-    place_offset_y = -2,
-		sidelen = 16,
-    fill_ratio = 0.00007,
-		biomes = {"naturalbiomes:heath"},
-		y_max = 31000,
-		y_min = 5,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_heath_stoneformation2.mts",
-		flags = "place_center_x, place_center_z",
-    rotation = "random",
-	})
-
-	minetest.register_decoration({
-		name = "naturalbiomes:heath_stoneformation3",
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:heath_litter", "naturalbiomes:heath_litter2"},
-    place_offset_y = -2,
-		sidelen = 16,
-    fill_ratio = 0.00007,
-		biomes = {"naturalbiomes:heath"},
-		y_max = 31000,
-		y_min = 5,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_heath_stoneformation3.mts",
-		flags = "place_center_x, place_center_z",
-    rotation = "random",
-	})

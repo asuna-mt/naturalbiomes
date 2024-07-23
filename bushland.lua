@@ -107,7 +107,7 @@ minetest.register_node("naturalbiomes:bushland_grass", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -144,7 +144,7 @@ minetest.register_node("naturalbiomes:bushland_grass2", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -181,7 +181,7 @@ minetest.register_node("naturalbiomes:bushland_grass3", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -218,7 +218,7 @@ minetest.register_node("naturalbiomes:bushland_grass4", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -255,7 +255,7 @@ minetest.register_node("naturalbiomes:bushland_grass5", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -292,7 +292,7 @@ minetest.register_node("naturalbiomes:bushland_grass6", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -329,7 +329,7 @@ minetest.register_node("naturalbiomes:bushland_grass7", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",

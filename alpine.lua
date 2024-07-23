@@ -219,7 +219,7 @@ minetest.register_decoration({
     fill_ratio = 0.00315,
     biomes = {"naturalbiomes:alpine"},
     y_max = 31000,
-    y_min = 30,
+    y_min = 12,
     schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_alpine_pine1_0_90.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
@@ -401,8 +401,8 @@ minetest.register_decoration({
     sidelen = 16,
     fill_ratio = 0.00715,
     biomes = {"naturalbiomes:alpine"},
-    y_max = 31000,
-    y_min = 30,
+    y_max = 11,
+    y_min = 4,
     schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_alpine_pine2_0_90.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
@@ -542,27 +542,6 @@ minetest.register_node("naturalbiomes:cowberry", {
 	end
 })
 
-	minetest.register_decoration({
-		name = "naturalbiomes:alpine_mushroom",
-		deco_type = "simple",
-		place_on = {"naturalbiomes:alpine_litter"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0,
-			scale = 0.04,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 7133,
-			octaves = 3,
-			persist = 0.6
-		},
-		y_max = 31000,
-		y_min = 30,
-		decoration = "naturalbiomes:alpine_mushroom",
-		spawn_by = "naturalbiomes:alpine_litter",
-
-})
-
-
 minetest.register_node("naturalbiomes:alpine_mushroom", {
 	description = S("Alpine Mushroom"),
 	tiles = {"naturalbiomes_alpine_mushroom.png"},
@@ -582,26 +561,6 @@ minetest.register_node("naturalbiomes:alpine_mushroom", {
 	}
 })
 
-
-	minetest.register_decoration({
-		name = "naturalbiomes:alpine_grass1",
-		deco_type = "simple",
-		place_on = {"naturalbiomes:alpine_litter"},
-		sidelen = 16,
-		noise_params = {
-			offset = -0.03,
-			scale = 0.1,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 4602,
-			octaves = 6,
-			persist = 1,
-		},
-		y_max = 30000,
-		y_min = 1,
-		decoration = "naturalbiomes:alpine_grass1",
-        spawn_by = "naturalbiomes:alpine_litter"
-	})
-
 minetest.register_node("naturalbiomes:alpine_grass1", {
 	    description = S"Alpine Grass",
 	    drawtype = "plantlike",
@@ -614,32 +573,13 @@ minetest.register_node("naturalbiomes:alpine_grass1", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
 		    fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 0.0, 4 / 16},
 	    },
     })
-
-	minetest.register_decoration({
-		name = "naturalbiomes:alpine_grass2",
-		deco_type = "simple",
-		place_on = {"naturalbiomes:alpine_litter"},
-		sidelen = 16,
-		noise_params = {
-			offset = -0.03,
-			scale = 0.1,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 4602,
-			octaves = 8,
-			persist = 1,
-		},
-		y_max = 31000,
-		y_min = 1,
-		decoration = "naturalbiomes:alpine_grass2",
-        spawn_by = "naturalbiomes:alpine_litter"
-	})
 
 minetest.register_node("naturalbiomes:alpine_grass2", {
 	    description = S"Alpine Grass",
@@ -653,32 +593,13 @@ minetest.register_node("naturalbiomes:alpine_grass2", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
 		    fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 0.0, 4 / 16},
 	    },
     })
-
-	minetest.register_decoration({
-		name = "naturalbiomes:alpine_grass3",
-		deco_type = "simple",
-		place_on = {"naturalbiomes:alpine_litter"},
-		sidelen = 16,
-		noise_params = {
-			offset = -0.03,
-			scale = 0.1,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 3602,
-			octaves = 7,
-			persist = 1,
-		},
-		y_max = 31000,
-		y_min = 1,
-		decoration = "naturalbiomes:alpine_grass3",
-        spawn_by = "naturalbiomes:alpine_litter"
-	})
 
 minetest.register_node("naturalbiomes:alpine_grass3", {
 	    description = S"Alpine Grass",
@@ -692,7 +613,7 @@ minetest.register_node("naturalbiomes:alpine_grass3", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -701,16 +622,31 @@ minetest.register_node("naturalbiomes:alpine_grass3", {
     })
 
 	minetest.register_decoration({
+		name = "naturalbiomes:alpine_grass3",
+		deco_type = "simple",
+		place_on = {"naturalbiomes:alpine_litter"},
+		sidelen = 16,
+		fill_ratio = 0.175,
+		y_max = 31000,
+		y_min = 1,
+		decoration = {
+			"naturalbiomes:alpine_grass1",
+			"naturalbiomes:alpine_grass2",
+			"naturalbiomes:alpine_grass3",
+		},
+	})
+
+	minetest.register_decoration({
 		name = "naturalbiomes:alpine_dandelion",
 		deco_type = "simple",
 		place_on = {"naturalbiomes:alpine_litter"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.03,
-			scale = 0.1,
+			scale = 0.15,
 			spread = {x = 100, y = 100, z = 100},
 			seed = 4602,
-			octaves = 6,
+			octaves = 4,
 			persist = 1,
 		},
 		y_max = 31000,
@@ -731,7 +667,7 @@ minetest.register_node("naturalbiomes:alpine_dandelion", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -746,16 +682,15 @@ minetest.register_node("naturalbiomes:alpine_dandelion", {
 		sidelen = 16,
 		noise_params = {
 			offset = -0.03,
-			scale = 0.1,
+			scale = 0.15,
 			spread = {x = 100, y = 100, z = 100},
 			seed = 4602,
-			octaves = 8,
+			octaves = 4,
 			persist = 1,
 		},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "naturalbiomes:alpine_edelweiss",
-        spawn_by = "naturalbiomes:mediterran_litter"
 	})
 
 minetest.register_node("naturalbiomes:alpine_edelweiss", {
@@ -770,7 +705,7 @@ minetest.register_node("naturalbiomes:alpine_edelweiss", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, beautiflowers = 1},
+	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -824,4 +759,26 @@ minetest.register_node("naturalbiomes:alpine_edelweiss", {
 		rotation = "random",
 		spawn_by = "naturalbiomes:alpine_litter",
 		num_spawn_by = 4,
+	})
+
+	minetest.register_decoration({
+		deco_type = "simple",
+		place_on = {
+			"naturalbiomes:alpine_litter",
+			"naturalbiomes:alppine1_leaves",
+			"naturalbiomes:alppine2_leaves",
+		},
+		sidelen = 16,
+		noise_params = {
+			offset = -0.75,
+			scale = -1,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 456,
+			octaves = 2,
+			persist = 1.0
+		},
+		biomes = {"alpine"},
+		y_max = 31000,
+		y_min = 1,
+		decoration = "default:snow",
 	})
