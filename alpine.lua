@@ -667,7 +667,7 @@ minetest.register_node("naturalbiomes:alpine_dandelion", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1},
+	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, color_yellow = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
@@ -705,7 +705,7 @@ minetest.register_node("naturalbiomes:alpine_edelweiss", {
 	    sunlight_propagates = true,
 	    walkable = false,
 	    buildable_to = true,
-	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1},
+	    groups = {snappy = 3, flower = 1, flora = 1, attached_node = 1, flammable = 1, color_white = 1},
 	    sounds = default.node_sound_leaves_defaults(),
 	    selection_box = {
 		    type = "fixed",
