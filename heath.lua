@@ -43,7 +43,7 @@ minetest.register_node("naturalbiomes:heath_litter2", {
 			persist = 0.5,
 			lacunarity = 0.8,
 		},
-		y_max = 60,
+		y_max = 31000,
 		y_min = 5,
 		decoration = "naturalbiomes:heath_litter3"
 	})
@@ -75,7 +75,7 @@ minetest.register_node("naturalbiomes:heath_litter3", {
 			persist = 0.5,
 			lacunarity = 0.9,
 		},
-		y_max = 60,
+		y_max = 31000,
 		y_min = 5,
 		decoration = "naturalbiomes:heath_litter2"
 	})
