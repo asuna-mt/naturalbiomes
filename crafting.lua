@@ -21,7 +21,7 @@ local S = minetest.get_translator("naturalbiomes")
     )
 
 
-    stairs.register_stair_and_slab(
+    --[[stairs.register_stair_and_slab( -- bamboo is disabled
       "naturalbiomes_bambooforest_rock_brick",
       "naturalbiomes:bamboo_brick",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
@@ -29,10 +29,10 @@ local S = minetest.get_translator("naturalbiomes")
       S("Bamboo Brick Stair"),
       S("Bamboo Brick Slab"),
       default.node_sound_wood_defaults()
-    )
+    )]]
 
 
-    stairs.register_stair_and_slab(
+    --[[stairs.register_stair_and_slab(
       "naturalbiomes_beach_rock_brick",
       "naturalbiomes:beach_brick",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
@@ -40,7 +40,7 @@ local S = minetest.get_translator("naturalbiomes")
       S("Beach Brick Stair"),
       S("Beach Brick Slab"),
       default.node_sound_wood_defaults()
-    )
+    )]]
 
 
     stairs.register_stair_and_slab(
@@ -67,8 +67,8 @@ local S = minetest.get_translator("naturalbiomes")
 walls.register(":naturalbiomes:alpine_brick_wall", S"Alpine Brick Wall", "naturalbiomes_alpine_rock_brick.png",
 		"naturalbiomes:alpine_brick_wall", default.node_sound_stone_defaults())
 
-walls.register(":naturalbiomes:bamboo_brick_wall", S"Bambooforest Wall", "naturalbiomes_bambooforest_rock_brick.png",
-		"naturalbiomes:bamboo_brick_wall", default.node_sound_stone_defaults())
+--[[walls.register(":naturalbiomes:bamboo_brick_wall", S"Bambooforest Wall", "naturalbiomes_bambooforest_rock_brick.png",
+		"naturalbiomes:bamboo_brick_wall", default.node_sound_stone_defaults())]]
 
 walls.register(":naturalbiomes:med_brick_wall", S"Mediterranean Wall", "naturalbiomes_mediterran_rock_brick.png",
 		"naturalbiomes:med_brick_wall", default.node_sound_stone_defaults())
@@ -76,8 +76,8 @@ walls.register(":naturalbiomes:med_brick_wall", S"Mediterranean Wall", "naturalb
 walls.register(":naturalbiomes:outback_brick_wall", S"Outback Wall", "naturalbiomes_outback_rock_brick.png",
 		"naturalbiomes:outback_brick_wall", default.node_sound_stone_defaults())
 
-walls.register(":naturalbiomes:beach_brick_wall", S"Palmbeach Wall", "naturalbiomes_beach_rock_brick.png",
-		"naturalbiomes:beach_brick_wall", default.node_sound_stone_defaults())
+--[[walls.register(":naturalbiomes:beach_brick_wall", S"Palmbeach Wall", "naturalbiomes_beach_rock_brick.png",
+		"naturalbiomes:beach_brick_wall", default.node_sound_stone_defaults())]]
 
 minetest.register_node("naturalbiomes:reed_bundle", {
 	description = S("Reed Bundle"),
@@ -99,21 +99,21 @@ minetest.register_node("naturalbiomes:alpine_brick", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("naturalbiomes:bamboo_brick", {
+--[[minetest.register_node("naturalbiomes:bamboo_brick", {
 	description = S("Bambooforest Brick"),
 	tiles = {"naturalbiomes_bambooforest_rock_brick.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
 	sounds = default.node_sound_stone_defaults(),
-})
+})]]
 
-minetest.register_node("naturalbiomes:beach_brick", {
+--[[minetest.register_node("naturalbiomes:beach_brick", {
 	description = S("Beach Brick"),
 	tiles = {"naturalbiomes_beach_rock_brick.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
 	sounds = default.node_sound_stone_defaults(),
-})
+})]]
 
 minetest.register_node("naturalbiomes:med_brick", {
 	description = S("Meditteranean Brick"),
@@ -164,23 +164,23 @@ minetest.register_craft({
 	
 })
 
-minetest.register_craft({
+--[[minetest.register_craft({
 	output = "naturalbiomes:bamboo_brick",
 	type = "shapeless",
 	recipe = 
 		{"naturalbiomes:bambooforest_rock", "naturalbiomes:bambooforest_rock"}
 
 	
-})
+})]]
 
-minetest.register_craft({
+--[[minetest.register_craft({
 	output = "naturalbiomes:beach_brick",
 	type = "shapeless",
 	recipe = 
 		{"naturalbiomes:palmbeach_rock", "naturalbiomes:palmbeach_rock"}
 
 	
-})
+})]]
 
 minetest.register_craft({
 	output = "naturalbiomes:med_brick",
@@ -211,23 +211,23 @@ minetest.register_craft({
 	
 })
 
-minetest.register_craft({
+--[[minetest.register_craft({
 	output = "naturalbiomes:bamboo_brick_wall",
 	type = "shapeless",
 	recipe = 
 		{"naturalbiomes:bamboo_brick"}
 
 	
-})
+})]]
 
-minetest.register_craft({
+--[[minetest.register_craft({
 	output = "naturalbiomes:beach_brick",
 	type = "shapeless",
 	recipe = 
 		{"naturalbiomes:beach_brick"}
 
 	
-})
+})]]
 
 minetest.register_craft({
 	output = "naturalbiomes:med_brick_wall",
@@ -385,7 +385,7 @@ doors.register("naturalbiomes_alpine2_door", {
 	} 
 })
 
-doors.register_trapdoor("naturalbiomes:bamboo_trapdoor", {
+--[[doors.register_trapdoor("naturalbiomes:bamboo_trapdoor", {
 	description = S"Bamboo Trapdoor",
 	inventory_image = "naturalbiomes_bamboo_trapdoor.png",
 	wield_image = "naturalbiomes_bamboo_trapdoor.png",
@@ -395,17 +395,17 @@ doors.register_trapdoor("naturalbiomes:bamboo_trapdoor", {
 	gain_open = 0.06,
 	gain_close = 0.13,
 
-})
+})]]
 
-minetest.register_craft({
+--[[minetest.register_craft({
 	output = "naturalbiomes:bamboo_trapdoor 2",
 	recipe = {
 		{"naturalbiomes:bamboo_wood", "naturalbiomes:bamboo_wood", "naturalbiomes:bamboo_wood"},
 		{"naturalbiomes:bamboo_wood", "naturalbiomes:bamboo_trunk", "naturalbiomes:bamboo_wood"},
 	}
-})
+})]]
 
-doors.register("naturalbiomes_bamboo_door", {
+--[[doors.register("naturalbiomes_bamboo_door", {
     tiles = {{ name = "naturalbiomes_bamboo_door.png", backface_culling = true }},
     description = S"Bamboo Door",
     inventory_image = "naturalbiomes_item_bamboo_door.png",
@@ -417,9 +417,9 @@ doors.register("naturalbiomes_bamboo_door", {
 		{"naturalbiomes:bamboo_trunk", "naturalbiomes:bamboo_trunk"},
 		{"naturalbiomes:bamboo_wood", "naturalbiomes:bamboo_wood"},
 	} 
-})
+})]]
 
-doors.register_trapdoor("naturalbiomes:banana_trapdoor", {
+--[[doors.register_trapdoor("naturalbiomes:banana_trapdoor", {
 	description = S"Banana Trapdoor",
 	inventory_image = "naturalbiomes_banana_trapdoor.png",
 	wield_image = "naturalbiomes_banana_trapdoor.png",
@@ -429,17 +429,17 @@ doors.register_trapdoor("naturalbiomes:banana_trapdoor", {
 	gain_open = 0.06,
 	gain_close = 0.13,
 
-})
+})]]
 
-minetest.register_craft({
+--[[minetest.register_craft({
 	output = "naturalbiomes:banana_trapdoor 2",
 	recipe = {
 		{"naturalbiomes:banana_wood", "naturalbiomes:banana_wood", "naturalbiomes:banana_wood"},
 		{"naturalbiomes:banana_wood", "naturalbiomes:banana_trunk", "naturalbiomes:banana_wood"},
 	}
-})
+})]]
 
-doors.register("naturalbiomes_banana_door", {
+--[[doors.register("naturalbiomes_banana_door", {
     tiles = {{ name = "naturalbiomes_banana_door.png", backface_culling = true }},
     description = S"Banana Door",
     inventory_image = "naturalbiomes_item_banana_door.png",
@@ -451,7 +451,7 @@ doors.register("naturalbiomes_banana_door", {
 		{"naturalbiomes:banana_trunk", "naturalbiomes:banana_trunk"},
 		{"naturalbiomes:banana_wood", "naturalbiomes:banana_wood"},
 	} 
-})
+})]]
 
 doors.register_trapdoor("naturalbiomes:birch_trapdoor", {
 	description = S"Birch Trapdoor",
@@ -487,7 +487,7 @@ doors.register("naturalbiomes_birch_door", {
 	} 
 })
 
-doors.register_trapdoor("naturalbiomes:coconut_trapdoor", {
+--[[doors.register_trapdoor("naturalbiomes:coconut_trapdoor", {
 	description = S"Coconut Trapdoor",
 	inventory_image = "naturalbiomes_cocopalm_trapdoor.png",
 	wield_image = "naturalbiomes_cocopalm_trapdoor.png",
@@ -497,17 +497,17 @@ doors.register_trapdoor("naturalbiomes:coconut_trapdoor", {
 	gain_open = 0.06,
 	gain_close = 0.13,
 
-})
+})]]
 
-minetest.register_craft({
+--[[minetest.register_craft({
 	output = "naturalbiomes:coconut_trapdoor 2",
 	recipe = {
 		{"naturalbiomes:palm_wood", "naturalbiomes:palm_wood", "naturalbiomes:palm_wood"},
 		{"naturalbiomes:palm_wood", "naturalbiomes:palm_trunk", "naturalbiomes:palm_wood"},
 	}
-})
+})]]
 
-doors.register("naturalbiomes_coconut_door", {
+--[[doors.register("naturalbiomes_coconut_door", {
     tiles = {{ name = "naturalbiomes_cocopalm_door.png", backface_culling = true }},
     description = S"Coconut Door",
     inventory_image = "naturalbiomes_item_cocopalm_door.png",
@@ -519,7 +519,7 @@ doors.register("naturalbiomes_coconut_door", {
 		{"naturalbiomes:palm_trunk", "naturalbiomes:palm_trunk"},
 		{"naturalbiomes:palm_wood", "naturalbiomes:palm_wood"},
 	} 
-})
+})]]
 
 doors.register_trapdoor("naturalbiomes:juniper_trapdoor", {
 	description = S"Juniper Trapdoor",

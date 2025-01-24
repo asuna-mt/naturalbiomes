@@ -17,17 +17,17 @@ default.register_leafdecay({
 	radius = 6
 })
 
-default.register_leafdecay({
+--[[default.register_leafdecay({ -- bamboo is disabled
 	trunks = {"naturalbiomes:bamboo_trunk"},
 	leaves = {"naturalbiomes:bamboo_leaves"},
 	radius = 4
-})
+})]]
 
-default.register_leafdecay({
+--[[default.register_leafdecay({ -- banana is disabled
 	trunks = {"naturalbiomes:banana_trunk"},
 	leaves = {"naturalbiomes:banana_leaves", "naturalbiomes:banana", "naturalbiomes:banana_bunch"},
 	radius = 4
-})
+})]]
 
 default.register_leafdecay({
 	trunks = {"naturalbiomes:olive_trunk"},
@@ -59,17 +59,17 @@ default.register_leafdecay({
 	radius = 6
 })
 
-default.register_leafdecay({
+--[[default.register_leafdecay({
 	trunks = {"naturalbiomes:palm_trunk"},
 	leaves = {"naturalbiomes:palm_leaves", "naturalbiomes:coconut"},
 	radius = 6
-})
+})]]
 
-default.register_leafdecay({
+--[[default.register_leafdecay({
 	trunks = {"naturalbiomes:beach_bush_stem"},
 	leaves = {"naturalbiomes:beach_bush_leaves"},
 	radius = 6
-})
+})]]
 
 default.register_leafdecay({
 	trunks = {"naturalbiomes:acacia_trunk"},

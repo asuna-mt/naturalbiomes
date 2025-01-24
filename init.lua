@@ -34,8 +34,8 @@ local S = minetest.get_translator and minetest.get_translator("naturalbiomes") o
 dofile(path .. "wetsavanna.lua") --
 dofile(path .. "alderswamp.lua") --
 dofile(path .. "alpine.lua") --
-dofile(path .. "bambooforest.lua") --
-dofile(path .. "palmbeach.lua") --
+--dofile(path .. "bambooforest.lua") -- biome is disabled
+--dofile(path .. "palmbeach.lua") -- biome is disabled
 dofile(path .. "outback.lua") --
 dofile(path .. "mediterranean.lua") --
 dofile(path .. "crafting.lua") --
