@@ -42,6 +42,59 @@ minetest.register_biome({
     humidity_point = 60,
 })
 
+-- Schematics
+
+minetest.register_decoration({
+	name = "naturalbiomes:alppine1_tree",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:alpine_litter"},
+	place_offset_y = 0,
+	sidelen = 16,
+	fill_ratio = 0.00315,
+	biomes = {"naturalbiomes:alpine"},
+	y_max = 31000,
+	y_min = 12,
+	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_alpine_pine1_0_90.mts",
+flags = "place_center_x, place_center_z",
+rotation = "random",
+})
+
+minetest.register_decoration({
+	name = "naturalbiomes:alppine2_tree",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:alpine_litter"},
+	place_offset_y = 0,
+	sidelen = 16,
+	fill_ratio = 0.00715,
+	biomes = {"naturalbiomes:alpine"},
+	y_max = 11,
+	y_min = 4,
+	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_alpine_pine2_0_90.mts",
+flags = "place_center_x, place_center_z",
+rotation = "random",
+})
+
+minetest.register_decoration({
+	name = "naturalbiomes:cowberry_bush",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:alpine_litter"},
+	place_offset_y = 1,
+	sidelen = 16,
+	noise_params = {
+offset = -0.004,
+		scale = 0.01,
+		spread = {x = 100, y = 100, z = 100},
+		seed = 697,
+		octaves = 3,
+		persist = 0.7,
+	},
+	biomes = {"naturalbiomes:alpine"},
+	y_max = 31000,
+	y_min = 30,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_alpine_cowberrybush.mts",
+	flags = "place_center_x, place_center_z",
+})
+
 -- Tree generation
 --
 
@@ -209,21 +262,6 @@ default.register_fence_rail(
     sounds = default.node_sound_wood_defaults()
   }
 )
-
-minetest.register_decoration({
-    name = "naturalbiomes:alppine1_tree",
-    deco_type = "schematic",
-    place_on = {"naturalbiomes:alpine_litter"},
-    place_offset_y = 0,
-    sidelen = 16,
-    fill_ratio = 0.00315,
-    biomes = {"naturalbiomes:alpine"},
-    y_max = 31000,
-    y_min = 12,
-    schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_alpine_pine1_0_90.mts",
-	flags = "place_center_x, place_center_z",
-	rotation = "random",
-})
 
 -- Tree generation
 --
@@ -393,21 +431,6 @@ default.register_fence_rail(
   }
 )
 
-minetest.register_decoration({
-    name = "naturalbiomes:alppine2_tree",
-    deco_type = "schematic",
-    place_on = {"naturalbiomes:alpine_litter"},
-    place_offset_y = 0,
-    sidelen = 16,
-    fill_ratio = 0.00715,
-    biomes = {"naturalbiomes:alpine"},
-    y_max = 11,
-    y_min = 4,
-    schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_alpine_pine2_0_90.mts",
-	flags = "place_center_x, place_center_z",
-	rotation = "random",
-})
-
 -- Tree generation
 --
 
@@ -422,27 +445,6 @@ local function grow_new_outback_bush(pos)
 minetest.remove_node(pos)
 	minetest.place_schematic({x = pos.x - 2, y = pos.y - 0, z = pos.z - 2}, modpath.."/schematics/naturalbiomes_alpine_cowberrybush.mts", "0", nil, false)
 end 
-
-	minetest.register_decoration({
-		name = "naturalbiomes:cowberry_bush",
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:alpine_litter"},
-    place_offset_y = 1,
-		sidelen = 16,
-		noise_params = {
-offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 697,
-			octaves = 3,
-			persist = 0.7,
-		},
-		biomes = {"naturalbiomes:alpine"},
-    y_max = 31000,
-    y_min = 30,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_alpine_cowberrybush.mts",
-		flags = "place_center_x, place_center_z",
-	})
 
 minetest.register_node("naturalbiomes:alpine_cowberrybush_stem", {
 	description = S("Cowberry Bush Stem"),

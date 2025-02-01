@@ -41,6 +41,77 @@ minetest.register_biome({
     humidity_point = 70,
 })
 
+-- Schematics
+
+minetest.register_decoration({
+	name = "naturalbiomes:alder_tree",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:alderswamp_litter"},
+	place_offset_y = 0,
+	sidelen = 16,
+	noise_params = {
+		offset = -0.002,
+		scale = 0.01,
+		spread = {x = 100, y = 20, z = 100},
+		seed = 5555,
+		octaves = 1,
+		persistence = 0.75,
+		flags = "eased"
+	},
+	biomes = {"naturalbiomes:alderswamp"},
+	y_max = 31000,
+	y_min = 1,
+	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_aldertree_0_270.mts",
+flags = "place_center_x, place_center_z",
+rotation = "random",
+})
+
+minetest.register_decoration({
+name = "naturalbiomes:alder_tree2",
+deco_type = "schematic",
+place_on = {"naturalbiomes:alderswamp_litter"},
+place_offset_y = 0,
+sidelen = 16,
+noise_params = {
+	offset = -0.002,
+	scale = 0.01,
+	spread = {x = 100, y = 20, z = 100},
+	seed = 5556,
+	octaves = 1,
+	persistence = 0.75,
+	flags = "eased"
+},
+biomes = {"naturalbiomes:alderswamp"},
+y_max = 31000,
+y_min = 1,
+schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_aldertree2_0_270.mts",
+flags = "place_center_x, place_center_z",
+rotation = "random",
+})
+
+minetest.register_decoration({
+name = "naturalbiomes:alder_tree3",
+deco_type = "schematic",
+place_on = {"naturalbiomes:alderswamp_litter"},
+place_offset_y = 0,
+sidelen = 16,
+noise_params = {
+	offset = -0.002,
+	scale = 0.01,
+	spread = {x = 100, y = 20, z = 100},
+	seed = 5557,
+	octaves = 1,
+	persistence = 0.75,
+	flags = "eased"
+},
+biomes = {"naturalbiomes:alderswamp"},
+y_max = 31000,
+y_min = 1,
+schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_aldertree3_0_270.mts",
+flags = "place_center_x, place_center_z",
+rotation = "random",
+})
+
 --
 -- Tree generation
 --
@@ -214,75 +285,6 @@ default.register_fence_rail(
     sounds = default.node_sound_wood_defaults()
   }
 )
-
-minetest.register_decoration({
-    name = "naturalbiomes:alder_tree",
-    deco_type = "schematic",
-    place_on = {"naturalbiomes:alderswamp_litter"},
-    place_offset_y = 0,
-    sidelen = 16,
-		noise_params = {
-			offset = -0.002,
-			scale = 0.01,
-			spread = {x = 100, y = 20, z = 100},
-			seed = 5555,
-			octaves = 1,
-			persistence = 0.75,
-			flags = "eased"
-		},
-    biomes = {"naturalbiomes:alderswamp"},
-    y_max = 31000,
-    y_min = 1,
-    schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_aldertree_0_270.mts",
-	flags = "place_center_x, place_center_z",
-	rotation = "random",
-})
-
-minetest.register_decoration({
-	name = "naturalbiomes:alder_tree2",
-	deco_type = "schematic",
-	place_on = {"naturalbiomes:alderswamp_litter"},
-	place_offset_y = 0,
-	sidelen = 16,
-	noise_params = {
-		offset = -0.002,
-		scale = 0.01,
-		spread = {x = 100, y = 20, z = 100},
-		seed = 5556,
-		octaves = 1,
-		persistence = 0.75,
-		flags = "eased"
-	},
-	biomes = {"naturalbiomes:alderswamp"},
-	y_max = 31000,
-	y_min = 1,
-	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_aldertree2_0_270.mts",
-flags = "place_center_x, place_center_z",
-rotation = "random",
-})
-
-minetest.register_decoration({
-	name = "naturalbiomes:alder_tree3",
-	deco_type = "schematic",
-	place_on = {"naturalbiomes:alderswamp_litter"},
-	place_offset_y = 0,
-	sidelen = 16,
-	noise_params = {
-		offset = -0.002,
-		scale = 0.01,
-		spread = {x = 100, y = 20, z = 100},
-		seed = 5557,
-		octaves = 1,
-		persistence = 0.75,
-		flags = "eased"
-	},
-	biomes = {"naturalbiomes:alderswamp"},
-	y_max = 31000,
-	y_min = 1,
-	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_aldertree3_0_270.mts",
-flags = "place_center_x, place_center_z",
-rotation = "random",
-})
 
 minetest.register_node("naturalbiomes:alderswamp_reed", {
 	    description = S"Alderswamp reed",

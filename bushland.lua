@@ -95,6 +95,210 @@ minetest.register_node("naturalbiomes:bushland_bushlandlitter", {
 		decoration = "default:sand"
 	})
 
+-- Schematics
+
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:bushland_bushlandlitter"},
+	place_offset_y = -1,
+	sidelen = 16,
+	noise_params = {
+offset = -0.004,
+		scale = 0.01,
+		spread = {x = 100, y = 100, z = 100},
+		seed = 697,
+		octaves = 3,
+		persist = 0.7,
+	},
+	biomes = {"naturalbiomes:bushland"},
+	y_max = 31000,
+	y_min = 4,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_blackberrybush.mts",
+	flags = "place_center_x, place_center_z",
+})
+
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:bushland_bushlandlitter"},
+	place_offset_y = -1,
+	sidelen = 16,
+	noise_params = {
+offset = -0.004,
+		scale = 0.01,
+		spread = {x = 100, y = 100, z = 100},
+		seed = 697,
+		octaves = 3,
+		persist = 0.7,
+	},
+	biomes = {"naturalbiomes:bushland"},
+	y_max = 31000,
+	y_min = 4,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_blackberrybush2.mts",
+	flags = "place_center_x, place_center_z",
+})
+
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:bushland_bushlandlitter"},
+	place_offset_y = -1,
+	sidelen = 16,
+	noise_params = {
+offset = -0.004,
+		scale = 0.01,
+		spread = {x = 100, y = 100, z = 100},
+		seed = 697,
+		octaves = 3,
+		persist = 0.7,
+	},
+	biomes = {"naturalbiomes:bushland"},
+	y_max = 31000,
+	y_min = 4,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_blackberrybush3.mts",
+	flags = "place_center_x, place_center_z",
+})
+
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:bushland_bushlandlitter"},
+	place_offset_y = 1,
+	sidelen = 16,
+	noise_params = {
+offset = -0.004,
+		scale = 0.01,
+		spread = {x = 100, y = 100, z = 100},
+		seed = 697,
+		octaves = 3,
+		persist = 0.7,
+	},
+	biomes = {"naturalbiomes:bushland"},
+	y_max = 31000,
+	y_min = 4,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_wildrosebush.mts",
+	flags = "place_center_x, place_center_z",
+})
+
+
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:bushland_bushlandlitter"},
+	place_offset_y = 1,
+	sidelen = 16,
+	noise_params = {
+offset = -0.004,
+		scale = 0.01,
+		spread = {x = 100, y = 100, z = 100},
+		seed = 697,
+		octaves = 3,
+		persist = 0.7,
+	},
+	biomes = {"naturalbiomes:bushland"},
+	y_max = 31000,
+	y_min = 4,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_wildrosebush2.mts",
+	flags = "place_center_x, place_center_z",
+})
+
+
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:bushland_bushlandlitter"},
+	place_offset_y = 1,
+	sidelen = 16,
+	noise_params = {
+offset = -0.004,
+		scale = 0.01,
+		spread = {x = 100, y = 100, z = 100},
+		seed = 697,
+		octaves = 3,
+		persist = 0.7,
+	},
+	biomes = {"naturalbiomes:bushland"},
+	y_max = 31000,
+	y_min = 4,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_wildrosebush3.mts",
+	flags = "place_center_x, place_center_z",
+})
+
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:bushland_bushlandlitter"},
+	place_offset_y = -3,
+	sidelen = 16,
+	fill_ratio = 0.00215,
+	biomes = {"naturalbiomes:bushland"},
+	y_max = 31000,
+	y_min = 4,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_hazelnutbush.mts",
+	flags = "place_center_x, place_center_z",
+})
+
+
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:bushland_bushlandlitter"},
+	place_offset_y = -3,
+	sidelen = 16,
+	fill_ratio = 0.00215,
+	biomes = {"naturalbiomes:bushland"},
+	y_max = 31000,
+	y_min = 4,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_hazelnutbush2.mts",
+	flags = "place_center_x, place_center_z",
+})
+
+
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:bushland_bushlandlitter"},
+	place_offset_y = -3,
+	sidelen = 16,
+	fill_ratio = 0.00215,
+	biomes = {"naturalbiomes:bushland"},
+	y_max = 31000,
+	y_min = 4,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_hazelnutbush3.mts",
+	flags = "place_center_x, place_center_z",
+})
+
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:bushland_bushlandlitter"},
+	place_offset_y = -1,
+	sidelen = 16,
+	fill_ratio = 0.00115,
+	biomes = {"naturalbiomes:bushland"},
+	y_max = 31000,
+	y_min = 4,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_deadbush3.mts",
+	flags = "place_center_x, place_center_z",
+})
+
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:bushland_bushlandlitter"},
+	place_offset_y = -1,
+	sidelen = 16,
+	fill_ratio = 0.00115,
+	biomes = {"naturalbiomes:bushland"},
+	y_max = 31000,
+	y_min = 4,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_deadbush2.mts",
+	flags = "place_center_x, place_center_z",
+})
+
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:bushland_bushlandlitter"},
+	place_offset_y = -1,
+	sidelen = 16,
+	fill_ratio = 0.00115,
+	biomes = {"naturalbiomes:bushland"},
+	y_max = 31000,
+	y_min = 4,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_deadbush.mts",
+	flags = "place_center_x, place_center_z",
+})
+
 minetest.register_node("naturalbiomes:bushland_grass", {
 	    description = S"Bushland Grass",
 	    drawtype = "plantlike",
@@ -366,66 +570,6 @@ minetest.remove_node(pos)
 	minetest.place_schematic({x = pos.x - 2, y = pos.y - 0, z = pos.z - 2}, modpath.."/schematics/naturalbiomes_bushland_blackberrybush.mts", "0", nil, false)
 end 
 
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:bushland_bushlandlitter"},
-    place_offset_y = -1,
-		sidelen = 16,
-		noise_params = {
-offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 697,
-			octaves = 3,
-			persist = 0.7,
-		},
-		biomes = {"naturalbiomes:bushland"},
-    y_max = 31000,
-    y_min = 4,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_blackberrybush.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:bushland_bushlandlitter"},
-    place_offset_y = -1,
-		sidelen = 16,
-		noise_params = {
-offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 697,
-			octaves = 3,
-			persist = 0.7,
-		},
-		biomes = {"naturalbiomes:bushland"},
-    y_max = 31000,
-    y_min = 4,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_blackberrybush2.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:bushland_bushlandlitter"},
-    place_offset_y = -1,
-		sidelen = 16,
-		noise_params = {
-offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 697,
-			octaves = 3,
-			persist = 0.7,
-		},
-		biomes = {"naturalbiomes:bushland"},
-    y_max = 31000,
-    y_min = 4,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_blackberrybush3.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
 minetest.register_node("naturalbiomes:bushland_blackberry_stem", {
 	description = S("Blackberry Bush Stem"),
 	drawtype = "plantlike",
@@ -555,68 +699,6 @@ local function grow_new_wildrose_bush(pos)
 minetest.remove_node(pos)
 	minetest.place_schematic({x = pos.x - 1, y = pos.y - 0, z = pos.z - 1}, modpath.."/schematics/naturalbiomes_bushland_wildrosebush.mts", "0", nil, false)
 end 
-
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:bushland_bushlandlitter"},
-    place_offset_y = 1,
-		sidelen = 16,
-		noise_params = {
-offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 697,
-			octaves = 3,
-			persist = 0.7,
-		},
-		biomes = {"naturalbiomes:bushland"},
-    y_max = 31000,
-    y_min = 4,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_wildrosebush.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:bushland_bushlandlitter"},
-    place_offset_y = 1,
-		sidelen = 16,
-		noise_params = {
-offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 697,
-			octaves = 3,
-			persist = 0.7,
-		},
-		biomes = {"naturalbiomes:bushland"},
-    y_max = 31000,
-    y_min = 4,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_wildrosebush2.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:bushland_bushlandlitter"},
-    place_offset_y = 1,
-		sidelen = 16,
-		noise_params = {
-offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 697,
-			octaves = 3,
-			persist = 0.7,
-		},
-		biomes = {"naturalbiomes:bushland"},
-    y_max = 31000,
-    y_min = 4,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_wildrosebush3.mts",
-		flags = "place_center_x, place_center_z",
-	})
 
 minetest.register_node("naturalbiomes:bushland_wildrose_stem", {
 	description = S("Wildrose Bush Stem"),
@@ -748,47 +830,6 @@ local function grow_new_hazelnut_bush(pos)
 minetest.remove_node(pos)
 	minetest.place_schematic({x = pos.x - 3, y = pos.y - 0, z = pos.z - 3}, modpath.."/schematics/naturalbiomes_bushland_hazelnutbush.mts", "0", nil, false)
 end 
-
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:bushland_bushlandlitter"},
-    place_offset_y = -3,
-		sidelen = 16,
-    fill_ratio = 0.00215,
-		biomes = {"naturalbiomes:bushland"},
-    y_max = 31000,
-    y_min = 4,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_hazelnutbush.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:bushland_bushlandlitter"},
-    place_offset_y = -3,
-		sidelen = 16,
-    fill_ratio = 0.00215,
-		biomes = {"naturalbiomes:bushland"},
-    y_max = 31000,
-    y_min = 4,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_hazelnutbush2.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:bushland_bushlandlitter"},
-    place_offset_y = -3,
-		sidelen = 16,
-    fill_ratio = 0.00215,
-		biomes = {"naturalbiomes:bushland"},
-    y_max = 31000,
-    y_min = 4,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_hazelnutbush3.mts",
-		flags = "place_center_x, place_center_z",
-	})
 
 minetest.register_node("naturalbiomes:bushland_hazelnut_stem", {
 	description = S("Hazelnut Bush Stem"),
@@ -928,45 +969,6 @@ minetest.register_node("naturalbiomes:bushland_deadbush_leaves", {
 
 	after_place_node = after_place_leaves,
 })
-
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:bushland_bushlandlitter"},
-    place_offset_y = -1,
-		sidelen = 16,
-    fill_ratio = 0.00115,
-		biomes = {"naturalbiomes:bushland"},
-    y_max = 31000,
-    y_min = 4,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_deadbush3.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:bushland_bushlandlitter"},
-    place_offset_y = -1,
-		sidelen = 16,
-    fill_ratio = 0.00115,
-		biomes = {"naturalbiomes:bushland"},
-    y_max = 31000,
-    y_min = 4,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_deadbush2.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-	minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:bushland_bushlandlitter"},
-    place_offset_y = -1,
-		sidelen = 16,
-    fill_ratio = 0.00115,
-		biomes = {"naturalbiomes:bushland"},
-    y_max = 31000,
-    y_min = 4,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_bushland_deadbush.mts",
-		flags = "place_center_x, place_center_z",
-	})
 
 -- cracked hazelnut
 minetest.register_craftitem("naturalbiomes:hazelnut_cracked", {

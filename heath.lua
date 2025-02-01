@@ -97,6 +97,118 @@ minetest.register_biome({
     humidity_point = 89,
 })
 
+-- Schematics
+
+minetest.register_decoration({
+	name = "naturalbiomes:heath_juniper_tree",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:heath_litter3"},
+	place_offset_y = 1,
+	sidelen = 8,
+	noise_params = {
+		offset = -0.001725,
+		scale = 0.01,
+		spread = {x = 100, y = 20, z = 100},
+		seed = 494,
+		octaves = 2,
+		persistence = 0.8,
+		lacunarity = 0.9,
+	},
+	biomes = {"naturalbiomes:heath"},
+	y_max = 31000,
+	y_min = 5,
+	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_junipertree.mts",
+flags = "place_center_x, place_center_z",
+rotation = "random",
+})
+
+minetest.register_decoration({
+	name = "naturalbiomes:heath_juniper_tree2",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:heath_litter3"},
+	place_offset_y = 1,
+	sidelen = 8,
+	noise_params = {
+		offset = -0.001725,
+		scale = 0.01,
+		spread = {x = 100, y = 20, z = 100},
+		seed = 672,
+		octaves = 2,
+		persistence = 0.8,
+		lacunarity = 0.9,
+	},
+	biomes = {"naturalbiomes:heath"},
+	y_max = 31000,
+	y_min = 5,
+	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_junipertree2.mts",
+flags = "place_center_x, place_center_z",
+rotation = "random",
+})
+
+minetest.register_decoration({
+	name = "naturalbiomes:heath_birch_tree",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:heath_litter"},
+	place_offset_y = 0,
+	sidelen = 16,
+	fill_ratio = 0.00315,
+	biomes = {"naturalbiomes:heath"},
+	y_max = 31000,
+	y_min = 5,
+	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_birchtree.mts",
+	flags = "place_center_x, place_center_z",
+	rotation = "random",
+	spawn_by = "naturalbiomes:heath_litter",
+	num_spawn_by = 6,
+})
+
+minetest.register_decoration({
+	name = "naturalbiomes:heath_birch_tree2",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:heath_litter"},
+	place_offset_y = 0,
+	sidelen = 16,
+	fill_ratio = 0.00315,
+	biomes = {"naturalbiomes:heath"},
+	y_max = 31000,
+	y_min = 5,
+	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_birchtree2.mts",
+	flags = "place_center_x, place_center_z",
+	rotation = "random",
+	spawn_by = "naturalbiomes:heath_litter",
+	num_spawn_by = 6,
+})
+
+minetest.register_decoration({
+	name = "naturalbiomes:heath_willow_tree",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:heath_litter"},
+	place_offset_y = 0,
+	sidelen = 16,
+	fill_ratio = 0.00125,
+	biomes = {"naturalbiomes:heath"},
+	y_max = 5,
+	y_min = 1,
+	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_willowtree11.mts",
+flags = "place_center_x, place_center_z",
+rotation = "random",
+})
+
+minetest.register_decoration({
+	name = "naturalbiomes:heath_willow_tree2",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:heath_litter"},
+	place_offset_y = -1,
+	sidelen = 16,
+	fill_ratio = 0.00125,
+	biomes = {"naturalbiomes:heath"},
+	y_max = 5,
+	y_min = 1,
+	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_willowtree22.mts",
+flags = "place_center_x, place_center_z",
+rotation = "random",
+})
+
 	minetest.register_decoration({
 		name = "naturalbiomes:heath_grass",
 		deco_type = "simple",
@@ -105,9 +217,8 @@ minetest.register_biome({
                 fill_ratio = 0.04115,
                 biomes = {"naturalbiomes:heath"},
 		y_max = 31000,
-		y_min = 4,
+		y_min = 1,
 		decoration = "naturalbiomes:heath_grass",
-        spawn_by = "naturalbiomes:heath_litter"
 	})
 
 minetest.register_node("naturalbiomes:heath_grass", {
@@ -137,9 +248,8 @@ minetest.register_node("naturalbiomes:heath_grass", {
                 fill_ratio = 0.06115,
                 biomes = {"naturalbiomes:heath"},
 		y_max = 31000,
-		y_min = 4,
+		y_min = 1,
 		decoration = "naturalbiomes:heath_grass2",
-        spawn_by = "naturalbiomes:heath_litter"
 	})
 
 minetest.register_node("naturalbiomes:heath_grass2", {
@@ -170,9 +280,8 @@ minetest.register_node("naturalbiomes:heath_grass2", {
                 fill_ratio = 0.08115,
                 biomes = {"naturalbiomes:heath"},
 		y_max = 31000,
-		y_min = 4,
+		y_min = 1,
 		decoration = "naturalbiomes:heath_grass3",
-        spawn_by = "naturalbiomes:heath_litter"
 	})
 
 minetest.register_node("naturalbiomes:heath_grass3", {
@@ -597,36 +706,6 @@ default.register_fence_rail(
   }
 )
 
-minetest.register_decoration({
-    name = "naturalbiomes:heath_willow_tree",
-    deco_type = "schematic",
-    place_on = {"naturalbiomes:heath_litter"},
-    place_offset_y = 0,
-    sidelen = 16,
-    fill_ratio = 0.00515,
-    biomes = {"naturalbiomes:heath"},
-    y_max = 5,
-    y_min = 1,
-    schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_willowtree11.mts",
-	flags = "place_center_x, place_center_z",
-	rotation = "random",
-})
-
-minetest.register_decoration({
-    name = "naturalbiomes:heath_willow_tree2",
-    deco_type = "schematic",
-    place_on = {"naturalbiomes:heath_litter"},
-    place_offset_y = -1,
-    sidelen = 16,
-    fill_ratio = 0.00515,
-    biomes = {"naturalbiomes:heath"},
-    y_max = 5,
-    y_min = 1,
-    schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_willowtree22.mts",
-	flags = "place_center_x, place_center_z",
-	rotation = "random",
-})
-
 -- New juniper tree
 
 local function grow_new_juniper_tree(pos)
@@ -798,52 +877,6 @@ default.register_fence_rail(
   }
 )
 
-minetest.register_decoration({
-    name = "naturalbiomes:heath_juniper_tree",
-    deco_type = "schematic",
-    place_on = {"naturalbiomes:heath_litter3"},
-    place_offset_y = 1,
-    sidelen = 8,
-		noise_params = {
-			offset = -0.001725,
-			scale = 0.01,
-			spread = {x = 100, y = 20, z = 100},
-			seed = 494,
-			octaves = 2,
-			persistence = 0.8,
-			lacunarity = 0.9,
-		},
-    biomes = {"naturalbiomes:heath"},
-    y_max = 31000,
-    y_min = 5,
-    schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_junipertree.mts",
-	flags = "place_center_x, place_center_z",
-	rotation = "random",
-})
-
-minetest.register_decoration({
-    name = "naturalbiomes:heath_juniper_tree2",
-    deco_type = "schematic",
-    place_on = {"naturalbiomes:heath_litter3"},
-    place_offset_y = 1,
-    sidelen = 8,
-		noise_params = {
-			offset = -0.001725,
-			scale = 0.01,
-			spread = {x = 100, y = 20, z = 100},
-			seed = 672,
-			octaves = 2,
-			persistence = 0.8,
-			lacunarity = 0.9,
-		},
-    biomes = {"naturalbiomes:heath"},
-    y_max = 31000,
-    y_min = 5,
-    schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_junipertree2.mts",
-	flags = "place_center_x, place_center_z",
-	rotation = "random",
-})
-
 -- New birch tree
 
 local function grow_new_birch_tree(pos)
@@ -1014,40 +1047,6 @@ default.register_fence_rail(
     sounds = default.node_sound_wood_defaults()
   }
 )
-
-minetest.register_decoration({
-	name = "naturalbiomes:heath_birch_tree",
-	deco_type = "schematic",
-	place_on = {"naturalbiomes:heath_litter"},
-	place_offset_y = 0,
-	sidelen = 16,
-	fill_ratio = 0.00315,
-	biomes = {"naturalbiomes:heath"},
-	y_max = 31000,
-	y_min = 5,
-	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_birchtree.mts",
-	flags = "place_center_x, place_center_z",
-	rotation = "random",
-	spawn_by = "naturalbiomes:heath_litter",
-	num_spawn_by = 6,
-})
-
-minetest.register_decoration({
-	name = "naturalbiomes:heath_birch_tree2",
-	deco_type = "schematic",
-	place_on = {"naturalbiomes:heath_litter"},
-	place_offset_y = 0,
-	sidelen = 16,
-	fill_ratio = 0.00315,
-	biomes = {"naturalbiomes:heath"},
-	y_max = 31000,
-	y_min = 5,
-	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_birchtree2.mts",
-	flags = "place_center_x, place_center_z",
-	rotation = "random",
-	spawn_by = "naturalbiomes:heath_litter",
-	num_spawn_by = 6,
-})
 
 	minetest.register_decoration({
 		name = "naturalbiomes:heatherflowernode",

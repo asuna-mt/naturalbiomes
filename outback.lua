@@ -48,6 +48,128 @@ minetest.register_biome({
     humidity_point = 32,
 })
 
+-- Schematics
+
+minetest.register_decoration({
+	name = "naturalbiomes:outback_tree",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:outback_litter"},
+	place_offset_y = 0,
+	sidelen = 16,
+	fill_ratio = 0.001,
+	biomes = {"naturalbiomes:outback"},
+	y_max = 31,
+	y_min = 1,
+	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_outback_tree1_0_90.mts",
+flags = "place_center_x, place_center_z",
+rotation = "random",
+})
+
+minetest.register_decoration({
+	name = "naturalbiomes:outback_tree2",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:outback_litter"},
+	place_offset_y = 0,
+	sidelen = 16,
+	fill_ratio = 0.00075,
+	biomes = {"naturalbiomes:outback"},
+	y_max = 31,
+	y_min = 1,
+	schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_outback_tree2_0_90.mts",
+flags = "place_center_x, place_center_z",
+rotation = "random",
+})
+
+minetest.register_decoration({
+	name = "naturalbiomes:outback_bush",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:outback_litter"},
+	place_offset_y = 1,
+	sidelen = 16,
+	noise_params = {
+offset = -0.004,
+		scale = 0.01,
+		spread = {x = 100, y = 100, z = 100},
+		seed = 391,
+		octaves = 3,
+		persist = 0.7,
+	},
+	biomes = {"naturalbiomes:outback"},
+	y_max = 31000,
+	y_min = 3,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_outback_bush_small2_0_270.mts",
+	flags = "place_center_x, place_center_z",
+})
+
+minetest.register_decoration({
+	name = "naturalbiomes:outback_rockformation1",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:outback_litter"},
+	place_offset_y = -1,
+	sidelen = 16,
+	fill_ratio = 0.00005,
+	biomes = {"naturalbiomes:outback"},
+	y_max = 31000,
+	y_min = 1,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_outback_rock1_0_90.mts",
+	flags = "place_center_x, place_center_z",
+	rotation = "random",
+})
+
+
+minetest.register_decoration({
+	name = "naturalbiomes:outback_rockformation2",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:outback_litter"},
+	place_offset_y = -2,
+	sidelen = 16,
+	fill_ratio = 0.00005,
+	biomes = {"naturalbiomes:outback"},
+	y_max = 31000,
+	y_min = 1,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_outback_rock2_0_90.mts",
+	flags = "place_center_x, place_center_z",
+	rotation = "random",
+})
+
+
+
+minetest.register_decoration({
+	name = "naturalbiomes:outback_rockformation3",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:outback_litter"},
+	place_offset_y = -3,
+	sidelen = 16,
+	fill_ratio = 0.00005,
+	biomes = {"naturalbiomes:outback"},
+	y_max = 31000,
+	y_min = 1,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_outback_rock3_0_90.mts",
+	flags = "place_center_x, place_center_z",
+	rotation = "random",
+})
+
+minetest.register_decoration({
+	name = "naturalbiomes:outback_bush2",
+	deco_type = "schematic",
+	place_on = {"naturalbiomes:outback_litter"},
+	place_offset_y = 1,
+	sidelen = 16,
+	noise_params = {
+offset = -0.004,
+		scale = 0.01,
+		spread = {x = 100, y = 100, z = 100},
+		seed = 391,
+		octaves = 3,
+		persist = 0.7,
+	},
+	biomes = {"naturalbiomes:outback"},
+	y_max = 31000,
+	y_min = 3,
+	schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_outback_bush2_0_90.mts",
+	flags = "place_center_x, place_center_z",
+})
+
 -- Tree generation
 --
 
@@ -216,36 +338,6 @@ default.register_fence_rail(
   }
 )
 
-minetest.register_decoration({
-    name = "naturalbiomes:outback_tree",
-    deco_type = "schematic",
-    place_on = {"naturalbiomes:outback_litter"},
-    place_offset_y = 0,
-    sidelen = 16,
-    fill_ratio = 0.001,
-    biomes = {"naturalbiomes:outback"},
-    y_max = 31,
-    y_min = 1,
-    schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_outback_tree1_0_90.mts",
-	flags = "place_center_x, place_center_z",
-	rotation = "random",
-})
-
-minetest.register_decoration({
-    name = "naturalbiomes:outback_tree2",
-    deco_type = "schematic",
-    place_on = {"naturalbiomes:outback_litter"},
-    place_offset_y = 0,
-    sidelen = 16,
-    fill_ratio = 0.00075,
-    biomes = {"naturalbiomes:outback"},
-    y_max = 31,
-    y_min = 1,
-    schematic = minetest.get_modpath("naturalbiomes").."/schematics/naturalbiomes_outback_tree2_0_90.mts",
-	flags = "place_center_x, place_center_z",
-	rotation = "random",
-})
-
 	minetest.register_decoration({
 		name = "naturalbiomes:outback_log",
 		deco_type = "schematic",
@@ -283,27 +375,6 @@ local function grow_new_outback_bush(pos)
 minetest.remove_node(pos)
 	minetest.place_schematic({x = pos.x - 2, y = pos.y - 0, z = pos.z - 2}, modpath.."/schematics/naturalbiomes_outback_bush_small2_0_270.mts", "0", nil, false)
 end 
-
-	minetest.register_decoration({
-		name = "naturalbiomes:outback_bush",
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:outback_litter"},
-    place_offset_y = 1,
-		sidelen = 16,
-		noise_params = {
-offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 391,
-			octaves = 3,
-			persist = 0.7,
-		},
-		biomes = {"naturalbiomes:outback"},
-		y_max = 31000,
-		y_min = 3,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_outback_bush_small2_0_270.mts",
-		flags = "place_center_x, place_center_z",
-	})
 
 minetest.register_node("naturalbiomes:outback_bush_stem", {
 	description = S("Outback Bush Stem"),
@@ -625,74 +696,3 @@ minetest.register_node("naturalbiomes:outback_rockformation1", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-	minetest.register_decoration({
-		name = "naturalbiomes:outback_rockformation1",
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:outback_litter"},
-    place_offset_y = -1,
-		sidelen = 16,
-    fill_ratio = 0.00005,
-		biomes = {"naturalbiomes:outback"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_outback_rock1_0_90.mts",
-		flags = "place_center_x, place_center_z",
-    rotation = "random",
-	})
-
-
-	minetest.register_decoration({
-		name = "naturalbiomes:outback_rockformation2",
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:outback_litter"},
-    place_offset_y = -2,
-		sidelen = 16,
-    fill_ratio = 0.00005,
-		biomes = {"naturalbiomes:outback"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_outback_rock2_0_90.mts",
-		flags = "place_center_x, place_center_z",
-    rotation = "random",
-	})
-
-
-
-	minetest.register_decoration({
-		name = "naturalbiomes:outback_rockformation3",
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:outback_litter"},
-    place_offset_y = -3,
-		sidelen = 16,
-    fill_ratio = 0.00005,
-		biomes = {"naturalbiomes:outback"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_outback_rock3_0_90.mts",
-		flags = "place_center_x, place_center_z",
-    rotation = "random",
-	})
-
-
--- Outback Bush 3
-
-	minetest.register_decoration({
-		name = "naturalbiomes:outback_bush2",
-		deco_type = "schematic",
-		place_on = {"naturalbiomes:outback_litter"},
-    place_offset_y = 1,
-		sidelen = 16,
-		noise_params = {
-offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 391,
-			octaves = 3,
-			persist = 0.7,
-		},
-		biomes = {"naturalbiomes:outback"},
-		y_max = 31000,
-		y_min = 3,
-		schematic = minetest.get_modpath("naturalbiomes") .. "/schematics/naturalbiomes_outback_bush2_0_90.mts",
-		flags = "place_center_x, place_center_z",
-	})
